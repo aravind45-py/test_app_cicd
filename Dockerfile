@@ -1,7 +1,6 @@
 FROM python:3.11.9-alpine
 
-COPY . .
-
+COPY requirements.txt .
 RUN pip install -r requirements.txt
-
-CMD ['fastapi' 'run']
+COPY . .
+CMD ["fastapi","run"]
